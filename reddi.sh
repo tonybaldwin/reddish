@@ -71,7 +71,7 @@ if [[ $(curl --ssl -u $user:$pass -d "status=$ud&title=$title&channel=$chan&rtof
 else 
 	echo "Success!"
 	echo $ud
-        read -p "Shall we have a look in your a browser now? (y/n): " op
+        read -p "Shall we have a look in your browser now? (y/n): " op
  
         if [ $op = "y" ]; then
 	     $browser $rurl/channel/$chan
