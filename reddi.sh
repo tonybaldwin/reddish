@@ -57,13 +57,17 @@ if [[ $xpo == "y" ]]; then
      if [[ $ltp == "y" ]]; then
      	lt=1
      fi
+     read -p "xpost to statusnet? (y/n) " snp
+     if [[ $snp == "y" ]]; then
+     	sn=1
+     fi
 else	
-     let fx=pp=wp=ij=lj=dw=lt=0
+     let fx=pp=wp=ij=lj=dw=lt=sn=0
 fi
 
 # and this is the curl command that sends the update to the server
  
-if [[ $(curl --ssl -u $user:$pass -d "status=$ud&title=$title&channel=$chan&rtof_enable=$fx&pumpio_enable=$pp&ljpost_enable=$lj&ijpost_enable=$ij&dwpost_enable=$dw&wppost_enable=$wp&libertree_enable=$lt&app=reddi.sh" $rurl/api/statuses/update.xml | grep error) ]]; then
+if [[ $(curl --ssl -u $user:$pass -d "status=$ud&title=$title&channel=$chan&rtof_enable=$fx&pumpio_enable=$pp&ljpost_enable=$lj&ijpost_enable=$ij&dwpost_enable=$dw&wppost_enable=$wp&libertree_enable=$lt&statusnet_enable=$sn&app=reddi.sh" $rurl/api/statuses/update.xml | grep error) ]]; then
  
 # what does the server say?
  
