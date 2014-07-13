@@ -35,7 +35,7 @@ echo "editor=$editor" >> $HOME/.reddi.conf
 echo "browser=$browser" >> $HOME/.reddi.conf
 
 echo "Installation complete!
-To use reddi.sh, simply type "reddi.sh" at the command line and follow the prompts.
+To use reddi.sh, simply type \"reddi.sh\" at the command line and follow the prompts.
 Enjoy! 
 tony https://tonybaldwin.info/channel/software"
 
