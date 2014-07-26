@@ -72,7 +72,7 @@ fi
 
 # and this is the curl command that sends the update to the server
  
-if [[ $(curl --ssl -u $user:$pass -d "status=$ud&title=$title&category=$cats&channel=$chan&rtof_enable=$fx&pumpio_enable=$pp&ljpost_enable=$lj&ijpost_enable=$ij&dwpost_enable=$dw&wppost_enable=$wp&libertree_enable=$lt&diaspora_enable=$dp&statusnet_enable=$sn&app=reddi.sh" $rurl/api/statuses/update.xml | grep error) ]]; then
+if [[ $(curl --ssl -u $user:$pass -d "status=$ud&title=$title&category=$cats&channel=$chan&rtof_enable=$fx&pumpio_enable=$pp&ljpost_enable=$lj&ijpost_enable=$ij&dwpost_enable=$dw&wppost_enable=$wp&libertree_enable=$lt&diaspora_enable=$dp&statusnet_enable=$sn&source=reddi.sh" $rurl/api/statuses/update.xml | grep error) ]]; then
  
 # what does the server say?
  
